@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8">
     <title>Nitetrain Fitness - Contact</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
-    <link rel="icon" type="image/x-icon" href="favicon.ico" />
-    <link rel="manifest" href="/images/site.webmanifest" />
-
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="manifest" href="/images/site.webmanifest">
+    <link rel="stylesheet" href="landing.css">
     <style>
       * {
         margin: 0;
@@ -34,32 +34,73 @@
     <a href="https://www.youtube.com/watch?v=sMzVwUqWGDk" target="_blank"
       >Warmup Video</a
     >
-    <hr />
-    <h1>Contact Us</h1>
-    <form>
-      <div>
-        <label for="firstName">First Name</label><br />
-        <input type="text" id="firstName" name="firstName" /><br />
+    <hr>
+    <form
+      method="post"
+      action="https://www.randyconnolly.com/tests/process.php"
+    >
+      <fieldset>
+        <legend>Contact Us</legend>
+        <div>
+          <label for="firstName">First Name</label><br>
+          <input
+			required
+			pattern="[A-Za-z ]{1,32}"
+			maxlength="32"
+            placeholder="Enter your first name"
+            type="text"
+            id="firstName"
+            name="firstName"
+		><br>
 
-        <label for="lastName">Last Name</label><br />
-        <input type="text" id="lastName" name="lastName" /><br />
-      </div>
-      <div>
-        <label for="email">E-Mail</label><br />
-        <input type="text" id="email" name="email" /><br />
-      </div>
-      <div>
-        <label for="subject">Subject</label><br />
-        <input type="text" id="subject" name="subject" /><br />
-      </div>
-      <div>
-        <label for="message">Message</label><br />
-        <input type="text" id="message" name="message" /><br />
-      </div>
-      <input type="submit" value="Submit" />
+          <label for="lastName">Last Name</label><br>
+          <input
+			required
+			pattern="[A-Za-z ]{1,32}"
+			maxlength="32"
+            placeholder="Enter your last name"
+            type="text"
+            id="lastName"
+            name="lastName"
+        ><br>
+        </div>
+        <div>
+          <label for="email">E-Mail</label><br>
+          <input
+		  	required
+		  	pattern="[^@]+@[^@.]+\.[^@]+"
+            placeholder="Enter your email.."
+            type="email"
+            id="email"
+            name="email"
+        ><br>
+        </div>
+        <div>
+          <label for="subject">Subject</label><br>
+          <input
+            placeholder="Reason for contact..."
+            type="text"
+            id="subject"
+            name="subject"
+        ><br>
+        </div>
+        <div>
+          <label for="message">Message</label><br>
+          <textarea
+			required
+			maxlength="255"
+            placeholder="Enter your message..."
+            id="message"
+            name="message"
+          >
+		  </textarea>
+		  <br>
+        </div>
+        <input type="submit" value="Submit">
+      </fieldset>
     </form>
-    <br />
-    <br />
+    <br>
+    <br>
     <div>
       <h1>Phone</h1>
       <h2>555-555-5555</h2>
